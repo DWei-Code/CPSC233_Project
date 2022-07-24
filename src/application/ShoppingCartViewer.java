@@ -30,13 +30,14 @@ public class ShoppingCartViewer {
         	allRows.getChildren().add(itemRow);
     	}
     	
-    	Label itemLabel = new Label(String.format("Total price: %.2d", totalPrice));
+    	Label itemLabel = new Label(String.format("Total price: %.2f", totalPrice));
     	Button newItemButton = new Button("Add a new item");
     	//newItemButton.setOnAction(doneEvent -> addItem());
     	allRows.getChildren().addAll(itemLabel, newItemButton);
     	
-    	Scene quizScene = new Scene(allRows, 500, 500);
-    	applicationStage.setScene(quizScene);
+    	Scene cartScene = new Scene(allRows, 500, 500);
+    	getApplicationStage().setScene(cartScene);
+    	getApplicationStage().show();
 	}
 	
 	public void addItem(Item item) {
@@ -45,6 +46,14 @@ public class ShoppingCartViewer {
 	
 	private void setItems(ArrayList<Item> items) {
 		this.items = items;
+	}
+
+	public Stage getApplicationStage() {
+		return applicationStage;
+	}
+
+	public void setApplicationStage(Stage applicationStage) {
+		this.applicationStage = applicationStage;
 	}
 	
 }

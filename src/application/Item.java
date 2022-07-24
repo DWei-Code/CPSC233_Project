@@ -3,7 +3,14 @@ package application;
 public class Item {
 	private String name;
 	private double price;
+	private String category;
 	private String description;
+	
+	public Item(String name, double price, String description) {
+		setName(name);
+		setPrice(price);
+		setDescription(description);
+	}
 	
 	public String getName() {
 		return name;
