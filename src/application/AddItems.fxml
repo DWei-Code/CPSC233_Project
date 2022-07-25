@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+
+
+<VBox prefHeight="271.0" prefWidth="363.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+	<children>
+		<HBox prefHeight="35.0" prefWidth="200.0">
+			<children>
+				<Label prefHeight="17.0" prefWidth="35.0" text="Name" />
+				<TextField prefHeight="25.0" prefWidth="141.0" />
+			</children>
+		</HBox>
+		<HBox prefHeight="35.0" prefWidth="200.0">
+			<children>
+				<Label prefHeight="17.0" prefWidth="35.0" text="Category" />
+				<ChoiceBox prefWidth="150.0">
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:value="Car" />
+							<String fx:value="Electronics" />
+							<String fx:value="Beauty" />
+							<String fx:value="Groceries" />
+						</FXCollections>
+					</items>
+				</ChoiceBox>
+
+			</children>
+		</HBox>
+		<HBox prefHeight="35.0" prefWidth="200.0">
+			<children>
+				<Label prefHeight="17.0" prefWidth="35.0" text="Price" />
+				<TextField prefHeight="25.0" prefWidth="141.0" />
+			</children>
+		</HBox>
+		<Label prefHeight="17.0" prefWidth="58.0" text="Comment" />
+		<TextArea prefHeight="100.0" />
+	</children>
+</VBox>
